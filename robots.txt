@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ma67-ex.github.io/sahm-halal/sitemap.xml
