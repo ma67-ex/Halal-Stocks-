@@ -3,6 +3,8 @@
 ![PWA](https://img.shields.io/badge/PWA-installable-5A0FC8)
 ![Offline](https://img.shields.io/badge/offline-ready-2ea44f)
 ![Stack](https://img.shields.io/badge/stack-HTML%20%2F%20CSS%20%2F%20JS-f7df1e)
+![Last commit](https://img.shields.io/github/last-commit/ma67-ex/Halal-Stocks-)
+![Repo size](https://img.shields.io/github/repo-size/ma67-ex/Halal-Stocks-)
 
 A dark **green and gold**, finance-themed web app showing **live Islamic and global stocks** with **3D** tilting cards, animated up and down trend charts, and **buy, sell, hold** signals. Fully responsive, 4K-crisp (vector charts), and installable on iOS as a home-screen app (PWA, works offline).
 
