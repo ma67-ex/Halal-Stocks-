@@ -6,9 +6,9 @@
 ![Last commit](https://img.shields.io/github/last-commit/ma67-ex/Halal-Stocks-)
 ![Repo size](https://img.shields.io/github/repo-size/ma67-ex/Halal-Stocks-)
 
-A dark **green and gold**, finance-themed web app showing **live Islamic and global stocks** with **3D** tilting cards, animated up and down trend charts, and **buy, sell, hold** signals. Fully responsive, 4K-crisp (vector charts), and installable on iOS as a home-screen app (PWA, works offline).
+A dark **green and gold**, finance-themed web app showing a demo of **Islamic and global stocks** with simulated prices, with **3D** tilting cards, animated up and down trend charts, and **buy, sell, hold** signals. Fully responsive, 4K-crisp (vector charts), and installable on iOS as a home-screen app (PWA, works offline).
 
-> ⚠️ Demo app with **simulated** live data. Signals are illustrative momentum indicators, **not financial advice.**
+> ⚠️ Demo app. Prices are **simulated** (a random walk around hard-coded starting prices), and the "Islamic" and "Global" groups are a hand-picked list that has **not** been Shariah-screened. Signals are illustrative momentum indicators, **not financial advice.**
 
 ## What problem this solves
 
@@ -67,3 +67,10 @@ Live in about a minute at **https://ma67-ex.github.io/stocks/**
 ## Next step (optional): real live prices
 
 Swap the simulated feed for a free API such as Finnhub or Twelve Data (free tier, needs an API key). Ask and it can be wired in.
+
+## Limits
+
+- Nothing here is real market data. Each price starts from a number typed into `index.html` and moves by a random step every 1.5 seconds.
+- The buy, sell and hold signals are a slope and momentum score over that random history, so they say nothing about a real company.
+- The Islamic and Global lists are a hand-picked sample. There is no screening for business activity, debt, or interest income, so no stock here should be treated as halal. A real version needs a screening source and real quotes, which means a backend or an API.
+- The canonical and share-card URLs point to `https://ma67-ex.github.io/sahm-halal/`, which only exists once you publish the app as described above.

@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="Sahm Halal" />
 <meta name="theme-color" content="#000000" />
-<meta name="description" content="Sahm Halal — live Islamic & global stocks with 3D visual up/down trends and AI buy/sell/hold signals. Dark green & gold finance theme, responsive, installable on iOS." />
+<meta name="description" content="Sahm Halal — a demo of Islamic and global stocks with 3D visual up/down trends and simple momentum signals, using simulated prices. Dark green & gold finance theme, responsive, installable on iOS." />
 <link rel="manifest" href="manifest.webmanifest" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
@@ -16,12 +16,12 @@
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Sahm Halal — Halal & Global Markets" />
-<meta property="og:description" content="Live Islamic & global stocks with 3D visual trends and AI buy/sell/hold signals." />
+<meta property="og:description" content="A demo of Islamic and global stocks with 3D visual trends and momentum signals, using simulated prices." />
 <meta property="og:url" content="https://ma67-ex.github.io/sahm-halal/" />
 <meta property="og:image" content="https://ma67-ex.github.io/sahm-halal/icon-512.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Sahm Halal — Halal & Global Markets" />
-<meta name="twitter:description" content="Live Islamic & global stocks with 3D visual trends and buy/sell/hold signals." />
+<meta name="twitter:description" content="A demo of Islamic and global stocks with 3D visual trends and momentum signals, using simulated prices." />
 <meta name="twitter:image" content="https://ma67-ex.github.io/sahm-halal/icon-512.png" />
 <title>Sahm Halal — Halal & Global Markets</title>
 <style>
@@ -253,7 +253,7 @@
       <div class="hijri-date"><span id="hijri">—</span></div>
       <div class="market-status">
         <span class="live-dot"></span>
-        <span id="clock">Markets Live</span>
+        <span id="clock">Simulated data</span>
       </div>
     </div>
   </header>
@@ -276,7 +276,7 @@
   <div id="sections"></div>
 
   <footer>
-    <strong>Sahm Halal</strong> — demo app with simulated live data.<br/>
+    <strong>Sahm Halal</strong> — demo app. Prices are a random simulation, not market data, and the "Islamic" and "Global" groups are a hand-picked list that has <strong>not</strong> been Shariah-screened: do not treat any stock here as halal.<br/>
     Buy / Sell / Hold signals are illustrative momentum indicators, <strong>not financial advice</strong>. Always do your own research.
   </footer>
 
@@ -380,8 +380,8 @@ function cardHTML(s){
 function render(){
   const sections = document.getElementById("sections");
   const groups = activeFilter === "all"
-    ? [["Islamic Stocks","islamic","var(--gold)"],["Global Stocks","foreign","var(--gold-2)"]]
-    : activeFilter === "islamic" ? [["Islamic Stocks","islamic","var(--gold)"]]
+    ? [["Islamic Stocks (not screened)","islamic","var(--gold)"],["Global Stocks","foreign","var(--gold-2)"]]
+    : activeFilter === "islamic" ? [["Islamic Stocks (not screened)","islamic","var(--gold)"]]
     : [["Global Stocks","foreign","var(--gold-2)"]];
   let html = "";
   groups.forEach(([title, cat, color]) => {
@@ -526,7 +526,7 @@ document.getElementById("searchInput").addEventListener("input", e => {
 });
 
 function updateClock(){
-  document.getElementById("clock").textContent = "Live · " + new Date().toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
+  document.getElementById("clock").textContent = "Simulated · " + new Date().toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
 }
 
 function updateHijri(){

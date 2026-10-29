@@ -1,5 +1,5 @@
 // Service worker — offline support for Halal Markets
-const CACHE = "sahm-halal-v1";
+const CACHE = "sahm-halal-v2"; // bumped so installed copies pick up the new wording
 const ASSETS = [
   "./",
   "./index.html",
